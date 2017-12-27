@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$id$</title>
+    <authors>Cyotek</authors>
+    <owners>Cyotek</owners>
+    <!--<licenseUrl>https://raw.githubusercontent.com/cyotek/Cyotek.Drawing.BitmapFont/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/cyotek/Cyotek.Drawing.BitmapFont</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/cyotek/Cyotek.Drawing.BitmapFont/master/resources/icon.png</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      TBC
+    </description>
+    <summary>
+      TBC
+    </summary>
+    <releaseNotes />
+    <copyright>$copyright$</copyright>
+    <language>en-GB</language>
+    <tags>cyotek color</tags>
+  </metadata>
+</package>
