@@ -1,4 +1,4 @@
-﻿// Cyotek 18-bit RGB VGA Palette Serializer
+// Cyotek 18-bit RGB VGA Palette Serializer
 // Copyright (c) 2017 Cyotek Ltd.
 // https://www.cyotek.com
 
@@ -87,7 +87,7 @@ namespace Cyotek.Drawing.PaletteFormat
 
           for (int i = 0; i < length; i++)
           {
-            // 6-bit values are in the rangle 0-63, anything higher clearly can't be valid
+            // 6-bit values are in the range 0-63, anything higher clearly can't be valid
             if (buffer[i] > 63)
             {
               result = false;
@@ -164,7 +164,7 @@ namespace Cyotek.Drawing.PaletteFormat
           throw new InvalidDataException(_invalidDataMessage);
         }
 
-        results[i] = Color.FromArgb(r << 2, g << 2, b << 2);
+        results[i] = Color.FromArgb(r * 255 / 63, g * 255 / 63, b * 255 / 63);
       }
 
       return results;
@@ -236,9 +236,9 @@ namespace Cyotek.Drawing.PaletteFormat
           index = i * 3;
           color = values[i];
 
-          buffer[index] = (byte)(color.R >> 2);
-          buffer[index + 1] = (byte)(color.G >> 2);
-          buffer[index + 2] = (byte)(color.B >> 2);
+          buffer[index] = (byte)(color.R * 63 / 255);
+          buffer[index + 1] = (byte)(color.G * 63 / 255);
+          buffer[index + 2] = (byte)(color.B * 63 / 255);
         }
 
         stream.Write(buffer, 0, length);
